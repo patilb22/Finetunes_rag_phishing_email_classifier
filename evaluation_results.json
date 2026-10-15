@@ -1,0 +1,480 @@
+[
+  {
+    "id": "eval-001",
+    "subject": "Microsoft 365 password expires today",
+    "label": "phishing",
+    "confidence": 0.8,
+    "reasons": [
+      "Credential harvesting through a lookalike portal and time pressure"
+    ],
+    "evidence": [
+      "Your Microsoft 365 password expires today. Keep access by signing in here: https://m365-authentication-review.example/session"
+    ],
+    "needs_review": false,
+    "retrieved_examples": [
+      {
+        "label": "phishing",
+        "distance": 0.2798,
+        "sender_domain": "cloudfiles-notice.example",
+        "text": "From: Document Share <share@cloudfiles-notice.example>\nSubject: Shared document: salary review\nBody:\nA confidential salary review document was shared with you. Sign in to view it: https://office-docs-login.example/open. Access expires shortly."
+      },
+      {
+        "label": "safe",
+        "distance": 0.2843,
+        "sender_domain": "example-service.example",
+        "text": "From: Example Service <security@example-service.example>\nSubject: Your requested password reset\nBody:\nWe received a request to reset your password. If this was you, use the password reset page by navigating to our website directly. If not, you can ignore this email."
+      },
+      {
+        "label": "phishing",
+        "distance": 0.2959,
+        "sender_domain": "hr-portal-update.example",
+        "text": "From: Payroll Team <payroll@hr-portal-update.example>\nSubject: Action required: verify payroll details\nBody:\nPayroll processing is paused until you confirm your direct deposit information. Use this secure form today: https://employee-payroll-verify.example/form."
+      },
+      {
+        "label": "phishing",
+        "distance": 0.2993,
+        "sender_domain": "ms-account-verify.example",
+        "text": "From: Security Notice <no-reply@ms-account-verify.example>\nSubject: Unusual sign-in detected\nBody:\nA sign-in from a new location was blocked. Review the activity at https://microsoft-security-review.example/login and enter your password to restore access."
+      },
+      {
+        "label": "safe",
+        "distance": 0.3029,
+        "sender_domain": "bank.example",
+        "text": "From: Example Bank <notices@bank.example>\nSubject: Monthly statement is ready\nBody:\nYour monthly statement is ready. Open the banking app or type your bank's usual address in your browser to view it. We will never ask for your password by email."
+      }
+    ],
+    "expected": "phishing",
+    "correct": true
+  },
+  {
+    "id": "eval-002",
+    "subject": "Water cooler replacement tomorrow",
+    "label": "safe",
+    "confidence": 1,
+    "reasons": [
+      "Expected public service announcement without a payment or credential request."
+    ],
+    "evidence": [
+      "Facilities will replace the second-floor water cooler tomorrow morning."
+    ],
+    "needs_review": false,
+    "retrieved_examples": [
+      {
+        "label": "safe",
+        "distance": 0.258,
+        "sender_domain": "city.example",
+        "text": "From: City Water <updates@city.example>\nSubject: Water service maintenance in your area\nBody:\nThe city water department will perform scheduled maintenance on Tuesday. Service may be interrupted briefly between 9 AM and noon."
+      },
+      {
+        "label": "safe",
+        "distance": 0.2899,
+        "sender_domain": "company.example",
+        "text": "From: Maya Chen <maya@company.example>\nSubject: Team lunch moved to Thursday\nBody:\nHi everyone, our team lunch is moved to Thursday at noon. Please reply in the calendar invite if you can make it."
+      },
+      {
+        "label": "safe",
+        "distance": 0.3164,
+        "sender_domain": "company.example",
+        "text": "From: Operations <operations@company.example>\nSubject: Reminder: submit timesheet by Friday\nBody:\nA friendly reminder to submit your timesheet by Friday. Open the timekeeping system from your regular company bookmark if you have not already submitted it."
+      },
+      {
+        "label": "safe",
+        "distance": 0.3199,
+        "sender_domain": "company.example",
+        "text": "From: Luis Romero <luis@company.example>\nSubject: Project notes from today's meeting\nBody:\nThanks for joining. I attached the notes from today's planning meeting. Let me know if I missed an action item."
+      },
+      {
+        "label": "safe",
+        "distance": 0.3249,
+        "sender_domain": "university.example",
+        "text": "From: Campus Library <library@university.example>\nSubject: Library maintenance notice\nBody:\nThe library catalog will be unavailable Saturday from 1 to 3 AM for planned maintenance. No action is needed."
+      }
+    ],
+    "expected": "safe",
+    "correct": true
+  },
+  {
+    "id": "eval-003",
+    "subject": "Wire transfer details changed",
+    "label": "phishing",
+    "confidence": 0.8,
+    "reasons": [
+      "Unexpected payment demand",
+      "External payment link using pressure"
+    ],
+    "evidence": [
+      "Our bank details have changed.",
+      "Update the beneficiary and send today's invoice payment to the new account listed in the attached document."
+    ],
+    "needs_review": false,
+    "retrieved_examples": [
+      {
+        "label": "phishing",
+        "distance": 0.2914,
+        "sender_domain": "vendor-payments.example",
+        "text": "From: Accounts Payable <invoice@vendor-payments.example>\nSubject: Invoice overdue - payment required\nBody:\nThe attached invoice is overdue. Review the payment details and submit payment today at https://billing-review.example/pay."
+      },
+      {
+        "label": "phishing",
+        "distance": 0.3292,
+        "sender_domain": "hr-portal-update.example",
+        "text": "From: Payroll Team <payroll@hr-portal-update.example>\nSubject: Action required: verify payroll details\nBody:\nPayroll processing is paused until you confirm your direct deposit information. Use this secure form today: https://employee-payroll-verify.example/form."
+      },
+      {
+        "label": "safe",
+        "distance": 0.331,
+        "sender_domain": "bank.example",
+        "text": "From: Example Bank <notices@bank.example>\nSubject: Monthly statement is ready\nBody:\nYour monthly statement is ready. Open the banking app or type your bank's usual address in your browser to view it. We will never ask for your password by email."
+      },
+      {
+        "label": "safe",
+        "distance": 0.3551,
+        "sender_domain": "example-service.example",
+        "text": "From: Example Service <security@example-service.example>\nSubject: Your requested password reset\nBody:\nWe received a request to reset your password. If this was you, use the password reset page by navigating to our website directly. If not, you can ignore this email."
+      },
+      {
+        "label": "safe",
+        "distance": 0.3679,
+        "sender_domain": "company.example",
+        "text": "From: Luis Romero <luis@company.example>\nSubject: Project notes from today's meeting\nBody:\nThanks for joining. I attached the notes from today's planning meeting. Let me know if I missed an action item."
+      }
+    ],
+    "expected": "phishing",
+    "correct": true
+  },
+  {
+    "id": "eval-004",
+    "subject": "Flight itinerary for your trip",
+    "label": "safe",
+    "confidence": 1,
+    "reasons": [
+      "Routine travel notification with no embedded link or request to disclose credentials."
+    ],
+    "evidence": [
+      "This is your itinerary for the business trip you booked."
+    ],
+    "needs_review": false,
+    "retrieved_examples": [
+      {
+        "label": "safe",
+        "distance": 0.2984,
+        "sender_domain": "company.example",
+        "text": "From: Operations <operations@company.example>\nSubject: Reminder: submit timesheet by Friday\nBody:\nA friendly reminder to submit your timesheet by Friday. Open the timekeeping system from your regular company bookmark if you have not already submitted it."
+      },
+      {
+        "label": "safe",
+        "distance": 0.3015,
+        "sender_domain": "company.example",
+        "text": "From: Luis Romero <luis@company.example>\nSubject: Project notes from today's meeting\nBody:\nThanks for joining. I attached the notes from today's planning meeting. Let me know if I missed an action item."
+      },
+      {
+        "label": "safe",
+        "distance": 0.3171,
+        "sender_domain": "company.example",
+        "text": "From: Human Resources <hr@company.example>\nSubject: Benefits enrollment opens Monday\nBody:\nBenefits enrollment opens Monday. You can review the options through the employee portal using the bookmark you already have. Contact HR with questions."
+      },
+      {
+        "label": "safe",
+        "distance": 0.3248,
+        "sender_domain": "company.example",
+        "text": "From: Maya Chen <maya@company.example>\nSubject: Team lunch moved to Thursday\nBody:\nHi everyone, our team lunch is moved to Thursday at noon. Please reply in the calendar invite if you can make it."
+      },
+      {
+        "label": "safe",
+        "distance": 0.3317,
+        "sender_domain": "bank.example",
+        "text": "From: Example Bank <notices@bank.example>\nSubject: Monthly statement is ready\nBody:\nYour monthly statement is ready. Open the banking app or type your bank's usual address in your browser to view it. We will never ask for your password by email."
+      }
+    ],
+    "expected": "safe",
+    "correct": true
+  },
+  {
+    "id": "eval-005",
+    "subject": "You have been mentioned in a private chat",
+    "label": "safe",
+    "confidence": 0.9,
+    "reasons": [
+      "Ordinary work follow-up without suspicious instructions or links"
+    ],
+    "evidence": [
+      "Thanks for joining. I attached the notes from today's planning meeting."
+    ],
+    "needs_review": false,
+    "retrieved_examples": [
+      {
+        "label": "safe",
+        "distance": 0.2817,
+        "sender_domain": "company.example",
+        "text": "From: Luis Romero <luis@company.example>\nSubject: Project notes from today's meeting\nBody:\nThanks for joining. I attached the notes from today's planning meeting. Let me know if I missed an action item."
+      },
+      {
+        "label": "safe",
+        "distance": 0.2853,
+        "sender_domain": "company.example",
+        "text": "From: Learning Team <learning@company.example>\nSubject: Quarterly security training assigned\nBody:\nYour quarterly security awareness course has been assigned. Find it by opening the learning portal from the company intranet. Completion is due by the end of the month."
+      },
+      {
+        "label": "phishing",
+        "distance": 0.3013,
+        "sender_domain": "cloudfiles-notice.example",
+        "text": "From: Document Share <share@cloudfiles-notice.example>\nSubject: Shared document: salary review\nBody:\nA confidential salary review document was shared with you. Sign in to view it: https://office-docs-login.example/open. Access expires shortly."
+      },
+      {
+        "label": "phishing",
+        "distance": 0.3125,
+        "sender_domain": "security-check.example",
+        "text": "From: Account Protection <alert@security-check.example>\nSubject: Your account will be closed tonight\nBody:\nWe detected unusual activity. Your account will be permanently closed tonight unless you confirm your password at https://account-protect-now.example/secure."
+      },
+      {
+        "label": "phishing",
+        "distance": 0.3201,
+        "sender_domain": "voice-notice.example",
+        "text": "From: Voice Messaging <voicemail@voice-notice.example>\nSubject: Voicemail waiting - listen now\nBody:\nYou have a new voicemail. Download the attached audio player update to listen. Enable macros if prompted."
+      }
+    ],
+    "expected": "phishing",
+    "correct": false
+  },
+  {
+    "id": "eval-006",
+    "subject": "Your appointment is confirmed",
+    "label": "safe",
+    "confidence": 1,
+    "reasons": [
+      "Routine internal scheduling with no credential request or suspicious link."
+    ],
+    "evidence": [
+      "This confirms your appointment for Wednesday at 10:30 AM."
+    ],
+    "needs_review": false,
+    "retrieved_examples": [
+      {
+        "label": "safe",
+        "distance": 0.3393,
+        "sender_domain": "company.example",
+        "text": "From: Maya Chen <maya@company.example>\nSubject: Team lunch moved to Thursday\nBody:\nHi everyone, our team lunch is moved to Thursday at noon. Please reply in the calendar invite if you can make it."
+      },
+      {
+        "label": "safe",
+        "distance": 0.3454,
+        "sender_domain": "company.example",
+        "text": "From: Operations <operations@company.example>\nSubject: Reminder: submit timesheet by Friday\nBody:\nA friendly reminder to submit your timesheet by Friday. Open the timekeeping system from your regular company bookmark if you have not already submitted it."
+      },
+      {
+        "label": "safe",
+        "distance": 0.3653,
+        "sender_domain": "city.example",
+        "text": "From: City Water <updates@city.example>\nSubject: Water service maintenance in your area\nBody:\nThe city water department will perform scheduled maintenance on Tuesday. Service may be interrupted briefly between 9 AM and noon."
+      },
+      {
+        "label": "phishing",
+        "distance": 0.3721,
+        "sender_domain": "hr-portal-update.example",
+        "text": "From: Payroll Team <payroll@hr-portal-update.example>\nSubject: Action required: verify payroll details\nBody:\nPayroll processing is paused until you confirm your direct deposit information. Use this secure form today: https://employee-payroll-verify.example/form."
+      },
+      {
+        "label": "safe",
+        "distance": 0.3731,
+        "sender_domain": "company.example",
+        "text": "From: Human Resources <hr@company.example>\nSubject: Benefits enrollment opens Monday\nBody:\nBenefits enrollment opens Monday. You can review the options through the employee portal using the bookmark you already have. Contact HR with questions."
+      }
+    ],
+    "expected": "safe",
+    "correct": true
+  },
+  {
+    "id": "eval-007",
+    "subject": "New shared file requires browser update",
+    "label": "phishing",
+    "confidence": 0.8,
+    "reasons": [
+      "Threat of account closure",
+      "Password collection",
+      "Suspicious login URL"
+    ],
+    "evidence": [
+      "Your account will be permanently closed tonight unless you confirm your password at https://account-protect-now.example/secure."
+    ],
+    "needs_review": false,
+    "retrieved_examples": [
+      {
+        "label": "phishing",
+        "distance": 0.287,
+        "sender_domain": "cloudfiles-notice.example",
+        "text": "From: Document Share <share@cloudfiles-notice.example>\nSubject: Shared document: salary review\nBody:\nA confidential salary review document was shared with you. Sign in to view it: https://office-docs-login.example/open. Access expires shortly."
+      },
+      {
+        "label": "safe",
+        "distance": 0.3865,
+        "sender_domain": "bank.example",
+        "text": "From: Example Bank <notices@bank.example>\nSubject: Monthly statement is ready\nBody:\nYour monthly statement is ready. Open the banking app or type your bank's usual address in your browser to view it. We will never ask for your password by email."
+      },
+      {
+        "label": "phishing",
+        "distance": 0.3888,
+        "sender_domain": "ms-account-verify.example",
+        "text": "From: Security Notice <no-reply@ms-account-verify.example>\nSubject: Unusual sign-in detected\nBody:\nA sign-in from a new location was blocked. Review the activity at https://microsoft-security-review.example/login and enter your password to restore access."
+      },
+      {
+        "label": "phishing",
+        "distance": 0.3928,
+        "sender_domain": "hr-portal-update.example",
+        "text": "From: Payroll Team <payroll@hr-portal-update.example>\nSubject: Action required: verify payroll details\nBody:\nPayroll processing is paused until you confirm your direct deposit information. Use this secure form today: https://employee-payroll-verify.example/form."
+      },
+      {
+        "label": "phishing",
+        "distance": 0.398,
+        "sender_domain": "security-check.example",
+        "text": "From: Account Protection <alert@security-check.example>\nSubject: Your account will be closed tonight\nBody:\nWe detected unusual activity. Your account will be permanently closed tonight unless you confirm your password at https://account-protect-now.example/secure."
+      }
+    ],
+    "expected": "phishing",
+    "correct": true
+  },
+  {
+    "id": "eval-008",
+    "subject": "Revised agenda for Monday's meeting",
+    "label": "safe",
+    "confidence": 1,
+    "reasons": [
+      "Routine internal scheduling with no credential request or suspicious link."
+    ],
+    "evidence": [
+      "Hi everyone, our team lunch is moved to Thursday at noon. Please reply in the calendar invite if you can make it."
+    ],
+    "needs_review": false,
+    "retrieved_examples": [
+      {
+        "label": "safe",
+        "distance": 0.2027,
+        "sender_domain": "company.example",
+        "text": "From: Maya Chen <maya@company.example>\nSubject: Team lunch moved to Thursday\nBody:\nHi everyone, our team lunch is moved to Thursday at noon. Please reply in the calendar invite if you can make it."
+      },
+      {
+        "label": "safe",
+        "distance": 0.213,
+        "sender_domain": "company.example",
+        "text": "From: Luis Romero <luis@company.example>\nSubject: Project notes from today's meeting\nBody:\nThanks for joining. I attached the notes from today's planning meeting. Let me know if I missed an action item."
+      },
+      {
+        "label": "safe",
+        "distance": 0.2902,
+        "sender_domain": "company.example",
+        "text": "From: Operations <operations@company.example>\nSubject: Reminder: submit timesheet by Friday\nBody:\nA friendly reminder to submit your timesheet by Friday. Open the timekeeping system from your regular company bookmark if you have not already submitted it."
+      },
+      {
+        "label": "safe",
+        "distance": 0.3413,
+        "sender_domain": "company.example",
+        "text": "From: Human Resources <hr@company.example>\nSubject: Benefits enrollment opens Monday\nBody:\nBenefits enrollment opens Monday. You can review the options through the employee portal using the bookmark you already have. Contact HR with questions."
+      },
+      {
+        "label": "safe",
+        "distance": 0.3548,
+        "sender_domain": "bank.example",
+        "text": "From: Example Bank <notices@bank.example>\nSubject: Monthly statement is ready\nBody:\nYour monthly statement is ready. Open the banking app or type your bank's usual address in your browser to view it. We will never ask for your password by email."
+      }
+    ],
+    "expected": "safe",
+    "correct": true
+  },
+  {
+    "id": "eval-009",
+    "subject": "Unclaimed payroll adjustment",
+    "label": "phishing",
+    "confidence": 0.8,
+    "reasons": [
+      "Sensitive financial information request",
+      "Urgency",
+      "Unverified external domain"
+    ],
+    "evidence": [
+      "Payroll processing is paused until you confirm your direct deposit information.",
+      "Use this secure form today: https://employee-payroll-verify.example/form.",
+      "A payroll adjustment is waiting for you."
+    ],
+    "needs_review": false,
+    "retrieved_examples": [
+      {
+        "label": "phishing",
+        "distance": 0.2023,
+        "sender_domain": "hr-portal-update.example",
+        "text": "From: Payroll Team <payroll@hr-portal-update.example>\nSubject: Action required: verify payroll details\nBody:\nPayroll processing is paused until you confirm your direct deposit information. Use this secure form today: https://employee-payroll-verify.example/form."
+      },
+      {
+        "label": "phishing",
+        "distance": 0.2812,
+        "sender_domain": "vendor-payments.example",
+        "text": "From: Accounts Payable <invoice@vendor-payments.example>\nSubject: Invoice overdue - payment required\nBody:\nThe attached invoice is overdue. Review the payment details and submit payment today at https://billing-review.example/pay."
+      },
+      {
+        "label": "safe",
+        "distance": 0.29,
+        "sender_domain": "bank.example",
+        "text": "From: Example Bank <notices@bank.example>\nSubject: Monthly statement is ready\nBody:\nYour monthly statement is ready. Open the banking app or type your bank's usual address in your browser to view it. We will never ask for your password by email."
+      },
+      {
+        "label": "safe",
+        "distance": 0.2951,
+        "sender_domain": "company.example",
+        "text": "From: Operations <operations@company.example>\nSubject: Reminder: submit timesheet by Friday\nBody:\nA friendly reminder to submit your timesheet by Friday. Open the timekeeping system from your regular company bookmark if you have not already submitted it."
+      },
+      {
+        "label": "phishing",
+        "distance": 0.3104,
+        "sender_domain": "revenue-claims.example",
+        "text": "From: Tax Processing <refund@revenue-claims.example>\nSubject: Tax refund available\nBody:\nYou are eligible for a tax refund. Submit your Social Security number and bank account details at https://tax-refund-claim.example before the claim expires."
+      }
+    ],
+    "expected": "phishing",
+    "correct": true
+  },
+  {
+    "id": "eval-010",
+    "subject": "Community garden volunteer day",
+    "label": "safe",
+    "confidence": 1,
+    "reasons": [
+      "Expected public service announcement without a payment or credential request."
+    ],
+    "evidence": [
+      "The neighborhood garden workday is Saturday at 9 AM. Bring gloves if you have them; tools and water will be provided."
+    ],
+    "needs_review": false,
+    "retrieved_examples": [
+      {
+        "label": "safe",
+        "distance": 0.3324,
+        "sender_domain": "city.example",
+        "text": "From: City Water <updates@city.example>\nSubject: Water service maintenance in your area\nBody:\nThe city water department will perform scheduled maintenance on Tuesday. Service may be interrupted briefly between 9 AM and noon."
+      },
+      {
+        "label": "safe",
+        "distance": 0.337,
+        "sender_domain": "company.example",
+        "text": "From: Maya Chen <maya@company.example>\nSubject: Team lunch moved to Thursday\nBody:\nHi everyone, our team lunch is moved to Thursday at noon. Please reply in the calendar invite if you can make it."
+      },
+      {
+        "label": "safe",
+        "distance": 0.3557,
+        "sender_domain": "company.example",
+        "text": "From: Luis Romero <luis@company.example>\nSubject: Project notes from today's meeting\nBody:\nThanks for joining. I attached the notes from today's planning meeting. Let me know if I missed an action item."
+      },
+      {
+        "label": "safe",
+        "distance": 0.3661,
+        "sender_domain": "company.example",
+        "text": "From: Operations <operations@company.example>\nSubject: Reminder: submit timesheet by Friday\nBody:\nA friendly reminder to submit your timesheet by Friday. Open the timekeeping system from your regular company bookmark if you have not already submitted it."
+      },
+      {
+        "label": "safe",
+        "distance": 0.4004,
+        "sender_domain": "company.example",
+        "text": "From: Learning Team <learning@company.example>\nSubject: Quarterly security training assigned\nBody:\nYour quarterly security awareness course has been assigned. Find it by opening the learning portal from the company intranet. Completion is due by the end of the month."
+      }
+    ],
+    "expected": "safe",
+    "correct": true
+  }
+]
